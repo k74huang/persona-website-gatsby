@@ -10,3 +10,22 @@ body,
 #gatsby-focus-wrapper {
   height: 100%;
 }
+
+/* width */
+::-webkit-scrollbar {
+  margin-right: 5px;
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6a6873;
+  border-radius: 10px;
+}
