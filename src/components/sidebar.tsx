@@ -49,8 +49,12 @@ function Sidebar({ children }) {
         <div className="flex font-bold flex-col items-end mr-12 mb-12 ">
           <SidebarLink title="Home" to="/"></SidebarLink>
           <SidebarLink title="Experience" to="/experiences"></SidebarLink>
-          <SidebarLink title="Projects" to="/"></SidebarLink>
-          <SidebarLink className="mt-4" title="Extras" to="/"></SidebarLink>
+          <SidebarLink title="Projects" to="/projects"></SidebarLink>
+          <SidebarLink
+            className="mt-4"
+            title="Extras"
+            to="/extras"
+          ></SidebarLink>
         </div>
       </div>
       <div
