@@ -12,6 +12,7 @@ import {
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons"
 import "../styles/global.css"
+import resume from "../resume.pdf"
 
 function SidebarLink(props: { title: string; to: string; className?: string }) {
   const fullClassName =
@@ -44,7 +45,7 @@ function Sidebar({ children }) {
             Kai <br></br>Huang
           </div>
           <div className="mt-4">
-            <SidebarIcon to="/resume.pdf" type={faFile} />
+            <SidebarIcon to={resume} type={faFile} />
             <SidebarIcon to="https://github.com/k74huang" type={faGithub} />
             <SidebarIcon
               to="https://www.linkedin.com/in/huang-kai/"
