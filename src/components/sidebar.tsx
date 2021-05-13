@@ -6,7 +6,11 @@ import {
   faFile,
   IconDefinition,
 } from "@fortawesome/free-solid-svg-icons"
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
+import {
+  faLinkedin,
+  faGithub,
+  faDiscord,
+} from "@fortawesome/free-brands-svg-icons"
 import "../styles/global.css"
 
 function SidebarLink(props: { title: string; to: string; className?: string }) {
@@ -22,12 +26,12 @@ function SidebarLink(props: { title: string; to: string; className?: string }) {
 
 function SidebarIcon(props: { to: string; type: IconDefinition }) {
   return (
-    <Link
-      to={props.to}
+    <a
+      href={props.to}
       className="text-lg text-greenBlack hover:text-orangeRed transition-colors ml-2"
     >
       <FontAwesomeIcon icon={props.type} />
-    </Link>
+    </a>
   )
 }
 
@@ -40,10 +44,17 @@ function Sidebar({ children }) {
             Kai <br></br>Huang
           </div>
           <div className="mt-4">
-            <SidebarIcon to="/" type={faFile} />
-            <SidebarIcon to="/" type={faGithub} />
-            <SidebarIcon to="/" type={faLinkedin} />
-            <SidebarIcon to="/" type={faEnvelope} />
+            <SidebarIcon to="/resume.pdf" type={faFile} />
+            <SidebarIcon to="https://github.com/k74huang" type={faGithub} />
+            <SidebarIcon
+              to="https://www.linkedin.com/in/huang-kai/"
+              type={faLinkedin}
+            />
+            <SidebarIcon to="mailto:k74huang@uwaterloo.ca" type={faEnvelope} />
+            <SidebarIcon
+              to="https://discord.com/users/188406319416344577"
+              type={faDiscord}
+            />
           </div>
         </div>
         <div className="flex font-bold flex-col items-end mr-12 mb-12 ">

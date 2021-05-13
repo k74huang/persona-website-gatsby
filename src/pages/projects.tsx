@@ -5,7 +5,6 @@ import Post from "../components/post"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobe } from "@fortawesome/free-solid-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { Link } from "gatsby"
 
 function Project(props: {
   children
@@ -22,20 +21,20 @@ function Project(props: {
           <div className="ml-2">
             |{" "}
             {props.githubLink && (
-              <Link to={props.githubLink}>
+              <a href={props.githubLink}>
                 <FontAwesomeIcon
                   className="text-greenBlack hover:text-orangeRed cursor-pointer ml-2"
                   icon={faGithub}
                 />
-              </Link>
+              </a>
             )}
             {props.webLink && (
-              <Link to={props.webLink}>
+              <a href={props.webLink}>
                 <FontAwesomeIcon
                   className="text-greenBlack hover:text-orangeRed cursor-pointer ml-2"
                   icon={faGlobe}
                 />
-              </Link>
+              </a>
             )}
           </div>
         </div>
@@ -49,6 +48,18 @@ function Project(props: {
 const ProjectsPage: React.FC = () => (
   <Layout title="Projects">
     <div className="text-grey text-justify">
+      <Post>
+        <Project
+          name="Personal Website"
+          description="You're looking at it"
+          githubLink="https://github.com/k74huang/persona-website-gatsby"
+          webLink="http://kai-huang.com/"
+        >
+          • Designed features on Figma then implemented them with React and
+          Tailwind CSS
+          <br></br> • Utilizes Gatsby for optimized performance
+        </Project>
+      </Post>
       <Post>
         <Project
           name="Valkyrie"
