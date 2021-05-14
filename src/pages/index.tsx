@@ -2,9 +2,11 @@ import * as React from "react"
 import "../styles/global.css"
 import Layout from "../components/layout"
 import Post from "../components/post"
+import Metadata from "../components/metadata"
 
 const IndexPage: React.FC = () => (
   <Layout title="Hey!">
+    <Metadata />
     <Post>
       <div className="text-grey text-justify">
         Welcome to my site! I'm a Computer Engineering student at the University

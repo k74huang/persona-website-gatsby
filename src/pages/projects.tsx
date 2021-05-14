@@ -3,8 +3,9 @@ import "../styles/global.css"
 import Layout from "../components/layout"
 import Post from "../components/post"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGlobe } from "@fortawesome/free-solid-svg-icons"
+import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import Metadata from "../components/metadata"
 
 function Project(props: {
   children
@@ -23,7 +24,7 @@ function Project(props: {
             {props.githubLink && (
               <a href={props.githubLink}>
                 <FontAwesomeIcon
-                  className="text-greenBlack hover:text-orangeRed cursor-pointer ml-2"
+                  className="cursor-pointer ml-2"
                   icon={faGithub}
                 />
               </a>
@@ -31,8 +32,8 @@ function Project(props: {
             {props.webLink && (
               <a href={props.webLink}>
                 <FontAwesomeIcon
-                  className="text-greenBlack hover:text-orangeRed cursor-pointer ml-2"
-                  icon={faGlobe}
+                  className="cursor-pointer ml-2"
+                  icon={faGlobeAmericas}
                 />
               </a>
             )}
@@ -47,6 +48,7 @@ function Project(props: {
 
 const ProjectsPage: React.FC = () => (
   <Layout title="Projects">
+    <Metadata title="Projects" />
     <div className="text-grey text-justify">
       <Post>
         <Project

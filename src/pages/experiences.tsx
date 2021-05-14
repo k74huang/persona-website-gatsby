@@ -2,6 +2,7 @@ import * as React from "react"
 import "../styles/global.css"
 import Layout from "../components/layout"
 import Post from "../components/post"
+import Metadata from "../components/metadata"
 
 function Experience(props: {
   children
@@ -25,6 +26,7 @@ function Experience(props: {
 
 const ExperiencesPage: React.FC = () => (
   <Layout title="Experience">
+    <Metadata title="Experience" />
     <div className="text-grey text-justify">
       <Post>
         <Experience

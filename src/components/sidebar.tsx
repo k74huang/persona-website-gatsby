@@ -15,9 +15,7 @@ import "../styles/global.css"
 import resume from "../resume.pdf"
 
 function SidebarLink(props: { title: string; to: string; className?: string }) {
-  const fullClassName =
-    (props.className ? props.className : "") +
-    " text-lg text-greenBlack hover:text-orangeRed transition-colors"
+  const fullClassName = (props.className ? props.className : "") + " text-lg"
   return (
     <Link to={props.to} className={fullClassName}>
       {props.title}
@@ -27,10 +25,7 @@ function SidebarLink(props: { title: string; to: string; className?: string }) {
 
 function SidebarIcon(props: { to: string; type: IconDefinition }) {
   return (
-    <a
-      href={props.to}
-      className="text-lg text-greenBlack hover:text-orangeRed transition-colors ml-2"
-    >
+    <a href={props.to} className="text-lg ml-2">
       <FontAwesomeIcon icon={props.type} />
     </a>
   )

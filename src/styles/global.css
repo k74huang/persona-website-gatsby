@@ -11,6 +11,14 @@ body,
   height: 100%;
 }
 
+a {
+  transition: all 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a:hover {
+  color: #bd5b47;
+}
+
 ::-webkit-scrollbar {
   margin-right: 5px;
   width: 10px;
