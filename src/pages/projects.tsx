@@ -57,9 +57,10 @@ const ProjectsPage: React.FC = () => (
           githubLink="https://github.com/k74huang/persona-website-gatsby"
           webLink="http://kai-huang.com/"
         >
-          • Designed features on Figma then implemented them with React and
-          Tailwind CSS
-          <br></br> • Utilizes Gatsby for optimized performance
+          • Designed colourscheme and UI on Figma
+          <br></br> • Built with React, Gatsby, and Tailwind CSS
+          <br></br> • Deploys automatically to an AWS S3 bucket that's used by
+          an AWS Cloudfront instance for global deployment
         </Project>
       </Post>
       <Post>
